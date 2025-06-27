@@ -108,12 +108,12 @@ GOOGLE_API_KEY=your-gemini-api-key
 
 ### 🔐 Google Calendar Setup (credentials.json)
 
-To enable Google Calendar access, you must place your **Google OAuth credentials** in the `ai_agent/` folder.
+To enable Google Calendar access, you must place your **Google OAuth credentials** file in project folder
 
 #### 📁 Required File
 
 ```
-ai_agent/credentials.json
+credentials.json
 ```
 
 #### 🪪 How to Generate Your Own `credentials.json`
@@ -124,7 +124,6 @@ ai_agent/credentials.json
 4. Click **"Create Credentials"** > **"OAuth client ID"**.
 5. Choose **"Desktop App"** as the application type.
 6. Download the generated `credentials.json`.
-7. Place it inside the `ai_agent/` folder.
 
 #### 📌 Don’t Forget
 ✅ Enable Google Calendar API

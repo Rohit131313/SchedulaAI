@@ -21,13 +21,13 @@ def ensure_utc(dt: datetime.datetime) -> datetime.datetime:
 # Google Calendar authentication
 def authenticate_google():
     creds = None
-    if os.path.exists("ai_agent/token.json"):
-        creds = Credentials.from_authorized_user_file("ai_agent/token.json", SCOPES)
+    if os.path.exists("token.json"):
+        creds = Credentials.from_authorized_user_file("token.json", SCOPES)
     if not creds or not creds.valid:
         if creds and creds.expired and creds.refresh_token:
             creds.refresh(Request())
         else:
-            flow = InstalledAppFlow.from_client_secrets_file("ai_agent/credentials.json", SCOPES)
+            flow = InstalledAppFlow.from_client_secrets_file("credentials.json", SCOPES)
             creds = flow.run_local_server(port=8080)
         with open("token.json", "w") as token:
             token.write(creds.to_json())

@@ -55,9 +55,10 @@ User Input → LangGraph AI Agent →
 │   ├── state.py                     # Shared LangGraph state
 │   ├── graph.py                     # Defines LangGraph flow
 │   └── graph.png                    # Visual diagram of agent flow
-│   └── credentials.json             # Google OAuth credentials
+│   
 |
 ├── agent\_runner.py                  # LangGraph agent runner
+└── credentials.json             # Google OAuth credentials
 ├── app.py                           # FastAPI backend
 ├── main.py                          # Streamlit frontend
 ├── .env                             # Environment vars (API keys etc.)
